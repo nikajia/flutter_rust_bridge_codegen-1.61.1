@@ -46,7 +46,7 @@ impl IrTypeTrait for IrTypeEnumRef {
         if let Target::Wasm = target {
             "JsValue".into()
         } else {
-            format!("anylink_{}", self.name)
+            format!("wire_{}", self.name)
         }
     }
 }

@@ -89,7 +89,7 @@ impl IrTypeTrait for IrTypeRustOpaque {
         if let Target::Wasm = target {
             "JsValue".into()
         } else {
-            format!("anylink_{}", self.safe_ident())
+            format!("wire_{}", self.safe_ident())
         }
     }
 }
