@@ -52,7 +52,7 @@ impl IrTypeTrait for IrTypePrimitiveList {
                 _ => format!("Box<[{}]>", self.primitive.rust_api_type()),
             }
         } else {
-            format!("wire_{}", self.safe_ident())
+            format!("anylink_{}", self.safe_ident())
         }
     }
 

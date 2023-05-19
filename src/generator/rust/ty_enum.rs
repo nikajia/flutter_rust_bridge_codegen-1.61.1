@@ -307,7 +307,7 @@ impl TypeRustGeneratorTrait for TypeEnumRefGenerator<'_> {
                         }})",
                         self.ir.name,
                         variant.name.rust_style(),
-                        format_args!("wire_{}", typ),
+                        format_args!("anylink_{}", typ),
                         body.join(",")
                     ),
                     Io,

@@ -35,7 +35,7 @@ impl IrTypeTrait for IrTypeGeneralList {
         if let Target::Wasm = target {
             "JsValue".into()
         } else {
-            format!("wire_{}", self.safe_ident())
+            format!("anylink_{}", self.safe_ident())
         }
     }
 

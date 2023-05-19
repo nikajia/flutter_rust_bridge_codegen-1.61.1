@@ -20,7 +20,7 @@ impl IrTypeTrait for IrTypeDartOpaque {
         if target.is_wasm() {
             "Object"
         } else {
-            "wire_DartOpaque"
+            "anylink_DartOpaque"
         }
         .to_owned()
     }
@@ -33,7 +33,7 @@ impl IrTypeTrait for IrTypeDartOpaque {
         if target.is_wasm() {
             "JsValue"
         } else {
-            "wire_DartOpaque"
+            "anylink_DartOpaque"
         }
         .to_owned()
     }

@@ -43,7 +43,7 @@ impl IrTypeTrait for IrTypeStructRef {
         if let Target::Wasm = target {
             "JsValue".into()
         } else {
-            format!("wire_{}", self.name)
+            format!("anylink_{}", self.name)
         }
     }
 }

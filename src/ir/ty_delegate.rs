@@ -257,7 +257,7 @@ impl IrTypeTrait for IrTypeDelegate {
     fn rust_wire_type(&self, target: Target) -> String {
         match (self, target) {
             (IrTypeDelegate::String, Target::Wasm) => "String".into(),
-            (IrTypeDelegate::StringList, Target::Io) => "wire_StringList".to_owned(),
+            (IrTypeDelegate::StringList, Target::Io) => "anylink_StringList".to_owned(),
             (IrTypeDelegate::StringList, Target::Wasm) => "JsValue".into(),
             _ => self.get_delegate().rust_wire_type(target),
         }
