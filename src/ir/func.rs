@@ -55,7 +55,7 @@ impl IrFuncDisplay {
 
 impl IrFunc {
     pub fn wire_func_name(&self) -> String {
-        format!("wire_{}", self.name)
+        format!("anylink_{}", self.name)
     }
 }
 

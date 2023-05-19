@@ -602,7 +602,7 @@ impl ExternFuncCollector {
         let params = params.into_iter().collect::<Vec<_>>();
         if matches!(target, Io) {
             self.names.push(func_name.to_string());
-        } else if target.is_wasm() && !func_name.starts_with("wire_") {
+        } else if target.is_wasm() && !func_name.starts_with("anylink_") {
             self.wasm_exports.push(IrFuncDisplay {
                 name: func_name.to_owned(),
                 inputs: params
